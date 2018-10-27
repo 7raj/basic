@@ -4,7 +4,7 @@ use Faker\Generator as Faker;
 
 $factory->define(App\Category::class, function (Faker $faker) {
     return [
-        'parent_id' => $faker->rand(1, 5),
+        'parent_id' => '1',
         'title' => $faker->words(rand(1, 5), true),
         'slug' => $faker->slug,
         'description' => $faker->paragraph(rand(1, 2), true),

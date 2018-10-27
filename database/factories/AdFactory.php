@@ -14,6 +14,6 @@ $factory->define(App\Ad::class, function (Faker $faker) {
         'slug' => $faker->slug,
         'content' => $faker->paragraph(rand(2, 7), true),
         'keywords' => $faker->words(rand(2, 7), true),
-        'status' => $faker->rand(1, 3),
+        'status' => $faker->numberBetween(1, 3),
     ];
 });

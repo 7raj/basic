@@ -21,7 +21,7 @@ class CreateCommentsTable extends Migration
             $table->integer('status')->unsigned()->default(1);
             $table->timestamps();
         });
-        Schema::table('ads', function ($table) {
+        Schema::table('comments', function ($table) {
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->foreign('ad_id')->references('id')->on('ads')->onDelete('cascade');
 
